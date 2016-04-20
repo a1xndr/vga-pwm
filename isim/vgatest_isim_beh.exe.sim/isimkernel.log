@@ -1,0 +1,10 @@
+Command line:
+   vgatest_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  46703
+
+Wed Apr 20 12:55:16 2016
+
+
+ Elaboration Time: 0.02 sec

@@ -1,0 +1,6 @@
+AR vgatest test /home/alxndr/Develpoment/FPGA/vga_test/vga.vhd sub00/vhpl05 1461183977
+EN vga NULL /home/alxndr/Develpoment/FPGA/vga_test/vga.vhd sub00/vhpl00 1460409571
+AR vga behavioral /home/alxndr/Develpoment/FPGA/vga_test/vga.vhd sub00/vhpl01 1460409572
+EN vgadrive NULL /home/alxndr/Develpoment/FPGA/vga_test/vga.vhd sub00/vhpl02 1461183975
+EN vgatest NULL /home/alxndr/Develpoment/FPGA/vga_test/vga.vhd sub00/vhpl04 1461183976
+AR vgadrive behaviour1 /home/alxndr/Develpoment/FPGA/vga_test/vga.vhd sub00/vhpl03 1461183845

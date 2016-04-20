@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/alxndr/Develpoment/FPGA/vga_test/vgatest_isim_beh.exe" -prj "/home/alxndr/Develpoment/FPGA/vga_test/vgatest_beh.prj" "work.vgatest" 
