@@ -1,13 +1,7 @@
-V3 6
-FL /home/alxndr/Develpoment/FPGA/vga_test/vga.vhd 2016/04/20.16:23:57 P.20131013
-EN work/VGAdrive 1461183844 FL /home/alxndr/Develpoment/FPGA/vga_test/vga.vhd \
+V3 3
+FL /home/alxndr/Develpoment/FPGA/vga_test/vga.vhd 2016/04/20.17:01:45 P.20131013
+EN work/VGAdrive 1461186111 FL /home/alxndr/Develpoment/FPGA/vga_test/vga.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
       PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/VGAdrive/behaviour1 1461183845 \
-      FL /home/alxndr/Develpoment/FPGA/vga_test/vga.vhd EN work/VGAdrive 1461183844
-EN work/vgatest 1461183846 \
-      FL /home/alxndr/Develpoment/FPGA/vga_test/vga.vhd PB ieee/std_logic_1164 1381692176 \
-      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/vgatest/test 1461183847 \
-      FL /home/alxndr/Develpoment/FPGA/vga_test/vga.vhd EN work/vgatest 1461183846 \
-      CP vgadrive
+AR work/VGAdrive/behaviour1 1461186112 \
+      FL /home/alxndr/Develpoment/FPGA/vga_test/vga.vhd EN work/VGAdrive 1461186111

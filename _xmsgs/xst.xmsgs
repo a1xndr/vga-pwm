@@ -5,28 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLParsers" num="1402" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/vga.vhd</arg>&quot; Line <arg fmt="%d" index="2">76</arg>. Object <arg fmt="%s" index="3">red</arg> of mode <arg fmt="%s" index="4">IN</arg> can not be updated.
+<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">42</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+<arg fmt="%s" index="3">&lt;column&gt;</arg>
 </msg>
 
-<msg type="error" file="HDLParsers" num="1402" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/vga.vhd</arg>&quot; Line <arg fmt="%d" index="2">77</arg>. Object <arg fmt="%s" index="3">green</arg> of mode <arg fmt="%s" index="4">IN</arg> can not be updated.
-</msg>
-
-<msg type="error" file="HDLParsers" num="1402" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/vga.vhd</arg>&quot; Line <arg fmt="%d" index="2">78</arg>. Object <arg fmt="%s" index="3">blue</arg> of mode <arg fmt="%s" index="4">IN</arg> can not be updated.
-</msg>
-
-<msg type="error" file="HDLParsers" num="1402" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/vga.vhd</arg>&quot; Line <arg fmt="%d" index="2">80</arg>. Object <arg fmt="%s" index="3">red</arg> of mode <arg fmt="%s" index="4">IN</arg> can not be updated.
-</msg>
-
-<msg type="error" file="HDLParsers" num="1402" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/vga.vhd</arg>&quot; Line <arg fmt="%d" index="2">81</arg>. Object <arg fmt="%s" index="3">green</arg> of mode <arg fmt="%s" index="4">IN</arg> can not be updated.
-</msg>
-
-<msg type="error" file="HDLParsers" num="1402" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/vga.vhd</arg>&quot; Line <arg fmt="%d" index="2">82</arg>. Object <arg fmt="%s" index="3">blue</arg> of mode <arg fmt="%s" index="4">IN</arg> can not be updated.
-</msg>
-
-<msg type="error" file="HDLParsers" num="1411" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/vga.vhd</arg>&quot; Line <arg fmt="%d" index="2">75</arg>. Parameter <arg fmt="%s" index="3">row</arg> of mode <arg fmt="%s" index="4">out</arg> can not be associated with a formal <arg fmt="%s" index="5">parameter</arg> of mode <arg fmt="%s" index="6">in</arg>.
-</msg>
-
-<msg type="error" file="HDLParsers" num="1411" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/vga.vhd</arg>&quot; Line <arg fmt="%d" index="2">75</arg>. Parameter <arg fmt="%s" index="3">column</arg> of mode <arg fmt="%s" index="4">out</arg> can not be associated with a formal <arg fmt="%s" index="5">parameter</arg> of mode <arg fmt="%s" index="6">in</arg>.
+<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">row</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 </msg>
 
 </messages>

@@ -288,30 +288,6 @@
 <msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;PS2D&quot;      LOC = &quot;P86&quot;;&gt; [/home/alxndr/Develpoment/FPGA/basys1revC-ucf/BasysRevCGeneral.ucf(55)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
-<msg type="info" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Bout&quot;       LOC = &quot;P48&quot;;&gt; [/home/alxndr/Develpoment/FPGA/basys1revC-ucf/BasysRevCGeneral.ucf(58)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Bout</arg>&quot; not found.  Please verify that:
-1. The specified design element actually exists in the original design.
-2. The specified object is spelled correctly in the constraint source file.
-</msg>
-
-<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Bout&quot;       LOC = &quot;P48&quot;;&gt; [/home/alxndr/Develpoment/FPGA/basys1revC-ucf/BasysRevCGeneral.ucf(58)]&apos; could not be found and so the Locate constraint will be removed.
-</msg>
-
-<msg type="info" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Gout&quot;       LOC = &quot;P47&quot;;&gt; [/home/alxndr/Develpoment/FPGA/basys1revC-ucf/BasysRevCGeneral.ucf(59)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Gout</arg>&quot; not found.  Please verify that:
-1. The specified design element actually exists in the original design.
-2. The specified object is spelled correctly in the constraint source file.
-</msg>
-
-<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Gout&quot;       LOC = &quot;P47&quot;;&gt; [/home/alxndr/Develpoment/FPGA/basys1revC-ucf/BasysRevCGeneral.ucf(59)]&apos; could not be found and so the Locate constraint will be removed.
-</msg>
-
-<msg type="info" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;Rout&quot;     LOC = &quot;P49&quot;;&gt; [/home/alxndr/Develpoment/FPGA/basys1revC-ucf/BasysRevCGeneral.ucf(61)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">Rout</arg>&quot; not found.  Please verify that:
-1. The specified design element actually exists in the original design.
-2. The specified object is spelled correctly in the constraint source file.
-</msg>
-
-<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;NET &quot;Rout&quot;     LOC = &quot;P49&quot;;&gt; [/home/alxndr/Develpoment/FPGA/basys1revC-ucf/BasysRevCGeneral.ucf(61)]&apos; could not be found and so the Locate constraint will be removed.
-</msg>
-
 <msg type="info" file="ConstraintSystem" num="59" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;JA&lt;0&gt;&quot; LOC = &quot;P79&quot;;&gt; [/home/alxndr/Develpoment/FPGA/basys1revC-ucf/BasysRevCGeneral.ucf(65)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">JA&lt;0&gt;</arg>&quot; not found.  Please verify that:
 1. The specified design element actually exists in the original design.
 2. The specified object is spelled correctly in the constraint source file.
