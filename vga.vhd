@@ -1,6 +1,7 @@
 -- VGA driver for Altera UP1 board  Rob Chapman  Feb 22, 1998
 
 Library IEEE;
+use ieee.numeric_std.all;
 use IEEE.STD_Logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
@@ -25,39 +26,35 @@ architecture behaviour1 of VGAdrive is
   constant P : natural := 2;   -- vertical blank: 
   constant S : natural := 29;  -- rear guard: 
   constant T : natural := P + Q + R + S;  -- one vertical sync cycle: 
-  
-  signal clockdiv : std_logic;
   signal row, column : std_logic_vector(9 downto 0);
-  signal red, green, blue : std_logic;
-
-  
+  signal red, green, blue :  std_logic_vector(3 downto 0);
 begin
 
-
-	process(clock)
-		begin
-			clockdiv<=clock;
-	end process;																			
-
-  process(clockdiv)
+																
+  process(clock)
     variable vertical, horizontal : counter;  -- define counters
+	 variable depth_counter: integer range 0 to 3;
+	 
   begin
-    --wait until clock = '1';
-    if (clockdiv'event and clockdiv='1') then
+    --wait until clock = '1111';
+    if (clock'event and clock='1') then
+		if depth_counter = 3 then
+	  -- increment counters
+			if  horizontal < A - 1  then
+			  horizontal := horizontal + 1;
+			else
+			  horizontal := (others => '0');
 
-  -- increment counters
-      if  horizontal < A - 1  then
-        horizontal := horizontal + 1;
-      else
-        horizontal := (others => '0');
-
-        if  vertical < T - 1  then -- less than oh
-          vertical := vertical + 1;
-        else
-          vertical := (others => '0');       -- is set to zero
-        end if;
-      end if;
-
+			  if  vertical < T - 1  then -- less than oh
+				 vertical := vertical + 1;
+			  else
+				 vertical := (others => '0');       -- is set to zero
+			  end if;
+			end if;
+			depth_counter := 0;
+		else
+			depth_counter := depth_counter+1;
+		end if;
   -- define H pulse
       if  horizontal >= (D + C )  and  horizontal < (D + C + B )  then
         H <= '0';
@@ -73,47 +70,48 @@ begin
       end if;
 	end if;
 	 if column < 80  then
-	 	red <= '1';
-		green <= '1';
-		blue <= '1';
+	 	red <= "1101";
+		green <= "1101";
+		blue <= "1101";
 	 elsif column < 160  then
-	 	red <= '1';
-		green <= '1';
-		blue <= '0';
+	 	red <= "1101";
+		green <= "1101";
+		blue <= "0010";
 	 elsif column < 240  then
-	 	red <= '0';
-		green <= '1';
-		blue <= '1';
+	 	red <= "0010";
+		green <= "1101";
+		blue <= "1101";
 	 elsif column < 320  then
-	 	red <= '0';
-		green <= '1';
-		blue <= '0';
+	 	red <= "0010";
+		green <= "1101";
+		blue <= "0010";
 	 elsif column < 400  then
-	 	red <= '1';
-		green <= '0';
-		blue <= '1';
+	 	red <= "1101";
+		green <= "0010";
+		blue <= "1101";
 	 elsif column < 480  then
-	 	red <= '1';
-		green <= '0';
-		blue <= '0';
+	 	red <= "1101";
+		green <= "0010";
+		blue <= "0010";
 	 elsif column < 560  then
-	 	red <= '0';
-		green <= '0';
-		blue <= '1';
+	 	red <= "0010";
+		green <= "0010";
+		blue <= "1101";
 	 else 
-	 	red <= '0';
-		green <= '0';
-		blue <= '0';
+	 	red <= "0010";
+		green <= "0010";
+		blue <= "0010";
     end if;
 
     -- mapping of the variable to the signals
      -- negative signs are because the conversion bits are reversed
-    row <= vertical;
-    column <= horizontal;
+   row <= vertical;
+   column <= horizontal;
+	 
 
-	Rout <= red;
-	Gout <= green;
-	Bout <= blue;
+	Rout <= red(depth_counter);
+	Gout <= green(depth_counter);
+	Bout <= blue(depth_counter);
 
   end process;
 

@@ -595,7 +595,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:  52
 
-Total memory usage is 387672 kilobytes
+Total memory usage is 387720 kilobytes
 
 Writing NGD file "VGAdrive.ngd" ...
 Total REAL time to NGDBUILD completion:  2 sec

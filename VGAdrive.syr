@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: VGAdrive.prj
@@ -121,7 +121,7 @@ Analyzing hierarchy for entity <VGAdrive> in library <work> (architecture <behav
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing Entity <VGAdrive> in library <work> (Architecture <behaviour1>).
-WARNING:Xst:819 - "/home/alxndr/Develpoment/FPGA/vga_test/vga.vhd" line 42: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+WARNING:Xst:819 - "/home/alxndr/Develpoment/FPGA/vga_test/vga.vhd" line 34: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
    <column>
 Entity <VGAdrive> analyzed. Unit <VGAdrive> generated.
 
@@ -135,29 +135,35 @@ Performing bidirectional port resolution...
 Synthesizing Unit <VGAdrive>.
     Related source file is "/home/alxndr/Develpoment/FPGA/vga_test/vga.vhd".
 WARNING:Xst:646 - Signal <row> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit 4-to-1 multiplexer for signal <Rout>.
+    Found 1-bit 4-to-1 multiplexer for signal <Gout>.
+    Found 1-bit 4-to-1 multiplexer for signal <Bout>.
     Found 1-bit register for signal <H>.
     Found 1-bit register for signal <V>.
-    Found 11-bit comparator less for signal <blue$cmp_lt0000> created at line 75.
-    Found 11-bit comparator less for signal <blue$cmp_lt0001> created at line 78.
-    Found 11-bit comparator less for signal <blue$cmp_lt0002> created at line 82.
-    Found 11-bit comparator less for signal <blue$cmp_lt0003> created at line 86.
-    Found 11-bit comparator less for signal <blue$cmp_lt0004> created at line 90.
-    Found 11-bit comparator less for signal <blue$cmp_lt0005> created at line 94.
-    Found 11-bit comparator less for signal <blue$cmp_lt0006> created at line 98.
-    Found 11-bit comparator greatequal for signal <H$cmp_ge0000> created at line 62.
-    Found 11-bit comparator less for signal <H$cmp_lt0000> created at line 62.
+    Found 11-bit comparator less for signal <blue$cmp_lt0000> created at line 72.
+    Found 11-bit comparator less for signal <blue$cmp_lt0001> created at line 75.
+    Found 11-bit comparator less for signal <blue$cmp_lt0002> created at line 79.
+    Found 11-bit comparator less for signal <blue$cmp_lt0003> created at line 83.
+    Found 11-bit comparator less for signal <blue$cmp_lt0004> created at line 87.
+    Found 11-bit comparator less for signal <blue$cmp_lt0005> created at line 91.
+    Found 11-bit comparator less for signal <blue$cmp_lt0006> created at line 95.
+    Found 2-bit up counter for signal <depth_counter>.
+    Found 11-bit comparator greatequal for signal <H$cmp_ge0000> created at line 59.
+    Found 11-bit comparator less for signal <H$cmp_lt0000> created at line 59.
     Found 10-bit register for signal <horizontal>.
-    Found 10-bit adder for signal <horizontal$addsub0000> created at line 50.
-    Found 11-bit comparator greatequal for signal <V$cmp_ge0000> created at line 69.
-    Found 11-bit comparator less for signal <V$cmp_lt0000> created at line 69.
+    Found 10-bit adder for signal <horizontal$addsub0000> created at line 44.
+    Found 11-bit comparator greatequal for signal <V$cmp_ge0000> created at line 66.
+    Found 11-bit comparator less for signal <V$cmp_lt0000> created at line 66.
     Found 10-bit register for signal <vertical>.
-    Found 10-bit adder for signal <vertical$addsub0000> created at line 55.
-    Found 11-bit comparator less for signal <vertical$cmp_lt0001> created at line 49.
-    Found 11-bit comparator less for signal <vertical$cmp_lt0002> created at line 54.
+    Found 10-bit adder for signal <vertical$addsub0000> created at line 49.
+    Found 11-bit comparator less for signal <vertical$cmp_lt0000> created at line 43.
+    Found 11-bit comparator less for signal <vertical$cmp_lt0001> created at line 48.
     Summary:
+	inferred   1 Counter(s).
 	inferred  22 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
 	inferred  13 Comparator(s).
+	inferred   3 Multiplexer(s).
 Unit <VGAdrive> synthesized.
 
 
@@ -167,12 +173,16 @@ HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 2
  10-bit adder                                          : 2
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
 # Registers                                            : 4
  1-bit register                                        : 2
  10-bit register                                       : 2
 # Comparators                                          : 13
  11-bit comparator greatequal                          : 2
  11-bit comparator less                                : 11
+# Multiplexers                                         : 3
+ 1-bit 4-to-1 multiplexer                              : 3
 
 =========================================================================
 
@@ -187,11 +197,15 @@ Advanced HDL Synthesis Report
 Macro Statistics
 # Adders/Subtractors                                   : 2
  10-bit adder                                          : 2
+# Counters                                             : 1
+ 2-bit up counter                                      : 1
 # Registers                                            : 22
  Flip-Flops                                            : 22
 # Comparators                                          : 13
  11-bit comparator greatequal                          : 2
  11-bit comparator less                                : 11
+# Multiplexers                                         : 3
+ 1-bit 4-to-1 multiplexer                              : 3
 
 =========================================================================
 
@@ -203,7 +217,7 @@ Optimizing unit <VGAdrive> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block VGAdrive, actual ratio is 3.
+Found area constraint ratio of 100 (+ 5) on block VGAdrive, actual ratio is 4.
 
 Final Macro Processing ...
 
@@ -211,8 +225,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 22
- Flip-Flops                                            : 22
+# Registers                                            : 24
+ Flip-Flops                                            : 24
 
 =========================================================================
 
@@ -241,16 +255,17 @@ Design Statistics
 # IOs                              : 6
 
 Cell Usage :
-# BELS                             : 98
+# BELS                             : 118
 #      GND                         : 1
-#      INV                         : 2
+#      INV                         : 3
 #      LUT1                        : 18
-#      LUT2                        : 2
+#      LUT2                        : 3
 #      LUT2_D                      : 1
-#      LUT3                        : 1
-#      LUT3_D                      : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 5
+#      LUT3_D                      : 2
 #      LUT3_L                      : 1
-#      LUT4                        : 25
+#      LUT4                        : 37
 #      LUT4_D                      : 1
 #      LUT4_L                      : 2
 #      MUXCY                       : 18
@@ -258,9 +273,9 @@ Cell Usage :
 #      MUXF6                       : 1
 #      VCC                         : 1
 #      XORCY                       : 20
-# FlipFlops/Latches                : 22
-#      FD                          : 10
-#      FDR                         : 12
+# FlipFlops/Latches                : 24
+#      FD                          : 20
+#      FDR                         : 4
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 5
@@ -272,9 +287,9 @@ Device utilization summary:
 
 Selected Device : 3s100evq100-4 
 
- Number of Slices:                       31  out of    960     3%  
- Number of Slice Flip Flops:             22  out of   1920     1%  
- Number of 4 input LUTs:                 54  out of   1920     2%  
+ Number of Slices:                       41  out of    960     4%  
+ Number of Slice Flip Flops:             24  out of   1920     1%  
+ Number of 4 input LUTs:                 74  out of   1920     3%  
  Number of IOs:                           6
  Number of bonded IOBs:                   6  out of     66     9%  
  Number of GCLKs:                         1  out of     24     4%  
@@ -300,7 +315,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clock                              | BUFGP                  | 22    |
+clock                              | BUFGP                  | 24    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -311,9 +326,9 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 7.429ns (Maximum Frequency: 134.608MHz)
+   Minimum period: 8.348ns (Maximum Frequency: 119.789MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: 6.712ns
+   Maximum output required time after clock: 8.060ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -322,34 +337,35 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clock'
-  Clock period: 7.429ns (frequency: 134.608MHz)
-  Total number of paths / destination ports: 635 / 32
+  Clock period: 8.348ns (frequency: 119.789MHz)
+  Total number of paths / destination ports: 746 / 26
 -------------------------------------------------------------------------
-Delay:               7.429ns (Levels of Logic = 4)
-  Source:            horizontal_9 (FF)
+Delay:               8.348ns (Levels of Logic = 5)
+  Source:            horizontal_6 (FF)
   Destination:       V (FF)
   Source Clock:      clock rising
   Destination Clock: clock rising
 
-  Data Path: horizontal_9 to V
+  Data Path: horizontal_6 to V
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              5   0.591   0.808  horizontal_9 (horizontal_9)
-     LUT2_D:I0->O          1   0.704   0.455  vertical_cmp_lt000123 (vertical_cmp_lt000123)
-     LUT4:I2->O           14   0.704   1.004  vertical_cmp_lt0001247 (vertical_cmp_lt0001)
-     LUT4:I3->O            1   0.704   0.424  V_and000052 (V_and000052)
-     LUT4:I3->O            1   0.704   0.420  V_and000086 (V_and0000)
+     FD:C->Q               8   0.591   0.932  horizontal_6 (horizontal_6)
+     LUT2:I0->O            2   0.704   0.451  Mmux_Gout231 (N14)
+     LUT4:I3->O            2   0.704   0.482  vertical_cmp_lt0000231 (vertical_cmp_lt0000231)
+     LUT3_D:I2->LO         1   0.704   0.104  vertical_cmp_lt0000238 (N31)
+     LUT4:I3->O           11   0.704   0.937  V_and0000355 (N12)
+     LUT4:I3->O            1   0.704   0.420  V_and000085 (V_and0000)
      FDR:R                     0.911          V
     ----------------------------------------
-    Total                      7.429ns (4.318ns logic, 3.111ns route)
-                                       (58.1% logic, 41.9% route)
+    Total                      8.348ns (5.022ns logic, 3.326ns route)
+                                       (60.2% logic, 39.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
-  Total number of paths / destination ports: 26 / 5
+  Total number of paths / destination ports: 35 / 5
 -------------------------------------------------------------------------
-Offset:              6.712ns (Levels of Logic = 4)
+Offset:              8.060ns (Levels of Logic = 5)
   Source:            horizontal_6 (FF)
   Destination:       Bout (PAD)
   Source Clock:      clock rising
@@ -358,25 +374,26 @@ Offset:              6.712ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              7   0.591   0.883  horizontal_6 (horizontal_6)
-     LUT4:I0->O            1   0.704   0.000  blue2 (blue1)
-     MUXF5:I1->O           1   0.321   0.000  blue_f5_0 (blue_f51)
-     MUXF6:I0->O           1   0.521   0.420  blue_f6 (Bout_OBUF)
+     FD:C->Q               8   0.591   0.932  horizontal_6 (horizontal_6)
+     LUT4:I0->O            1   0.704   0.000  Mmux_Bout213 (Mmux_Bout212)
+     MUXF5:I0->O           1   0.321   0.000  Mmux_Bout21_f5_0 (Mmux_Bout21_f51)
+     MUXF6:I0->O           1   0.521   0.595  Mmux_Bout21_f6 (N01)
+     LUT3:I0->O            1   0.704   0.420  Mmux_Bout22 (Bout_OBUF)
      OBUF:I->O                 3.272          Bout_OBUF (Bout)
     ----------------------------------------
-    Total                      6.712ns (5.409ns logic, 1.303ns route)
-                                       (80.6% logic, 19.4% route)
+    Total                      8.060ns (6.113ns logic, 1.947ns route)
+                                       (75.8% logic, 24.2% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 4.43 secs
+Total CPU time to Xst completion: 4.35 secs
  
 --> 
 
 
-Total memory usage is 509960 kilobytes
+Total memory usage is 510948 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)

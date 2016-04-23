@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/alxndr/Develpoment/FPGA/vga_test/impact.xsl
+OUTFILE=/home/alxndr/Develpoment/FPGA/vga_test/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/home/alxndr/Develpoment/FPGA/vga_test
+LICENSE=iMPACT
+USER_INFO=iMPACT
