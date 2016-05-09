@@ -5,11 +5,31 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="Xst" num="819" delta="old" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/vga.vhd</arg>&quot; line <arg fmt="%d" index="2">34</arg>: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
-<arg fmt="%s" index="3">&lt;column&gt;</arg>
+<msg type="error" file="HDLParsers" num="409" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/renderer.vhd</arg>&quot; Line <arg fmt="%d" index="2">45</arg>. <arg fmt="%s" index="3">Signal &apos;r&apos;</arg> <arg fmt="%s" index="4">r</arg> is at left hand side of variable assignment statement.
 </msg>
 
-<msg type="warning" file="Xst" num="646" delta="old" >Signal &lt;<arg fmt="%s" index="1">row</arg>&gt; is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+<msg type="error" file="HDLParsers" num="409" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/renderer.vhd</arg>&quot; Line <arg fmt="%d" index="2">46</arg>. <arg fmt="%s" index="3">Signal &apos;c&apos;</arg> <arg fmt="%s" index="4">c</arg> is at left hand side of variable assignment statement.
+</msg>
+
+<msg type="error" file="HDLParsers" num="808" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/renderer.vhd</arg>&quot; Line <arg fmt="%d" index="2">47</arg>. <arg fmt="%s" index="3">&lt;</arg> can not have such operands in this context.
+</msg>
+
+<msg type="error" file="HDLParsers" num="808" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/renderer.vhd</arg>&quot; Line <arg fmt="%d" index="2">51</arg>. <arg fmt="%s" index="3">&lt;</arg> can not have such operands in this context.
+</msg>
+
+<msg type="error" file="HDLParsers" num="808" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/renderer.vhd</arg>&quot; Line <arg fmt="%d" index="2">55</arg>. <arg fmt="%s" index="3">&lt;</arg> can not have such operands in this context.
+</msg>
+
+<msg type="error" file="HDLParsers" num="808" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/renderer.vhd</arg>&quot; Line <arg fmt="%d" index="2">59</arg>. <arg fmt="%s" index="3">&lt;</arg> can not have such operands in this context.
+</msg>
+
+<msg type="error" file="HDLParsers" num="808" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/renderer.vhd</arg>&quot; Line <arg fmt="%d" index="2">63</arg>. <arg fmt="%s" index="3">&lt;</arg> can not have such operands in this context.
+</msg>
+
+<msg type="error" file="HDLParsers" num="808" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/renderer.vhd</arg>&quot; Line <arg fmt="%d" index="2">67</arg>. <arg fmt="%s" index="3">&lt;</arg> can not have such operands in this context.
+</msg>
+
+<msg type="error" file="HDLParsers" num="808" delta="new" >&quot;<arg fmt="%s" index="1">/home/alxndr/Develpoment/FPGA/vga_test/renderer.vhd</arg>&quot; Line <arg fmt="%d" index="2">71</arg>. <arg fmt="%s" index="3">&lt;</arg> can not have such operands in this context.
 </msg>
 
 </messages>

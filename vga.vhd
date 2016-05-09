@@ -1,4 +1,3 @@
--- VGA driver for Altera UP1 board  Rob Chapman  Feb 22, 1998
 
 Library IEEE;
 use ieee.numeric_std.all;
@@ -6,14 +5,17 @@ use IEEE.STD_Logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
-entity VGAdrive is
+entity VGAdriver is
   port( clock            : in std_logic;  -- 25.175 Mhz clock
          -- for current pixel
-        Rout, Gout, Bout, H, V : out std_logic); -- VGA drive signals
+        Red_out, Grn_out, Blu_out, H, V : out std_logic; 	
+		  red, green, blue :  in std_logic_vector(3 downto 0);
+		  row, column 				 :	out std_logic_vector(9 downto 0)
+		  ); -- VGA drive signals
 
 end;
 
-architecture behaviour1 of VGAdrive is
+architecture behaviour1 of VGAdriver is
   subtype counter is std_logic_vector(9 downto 0);
   constant D : natural := 640; -- horizontal columns: 
   constant C : natural := 16;  -- front porch: 
@@ -26,8 +28,7 @@ architecture behaviour1 of VGAdrive is
   constant P : natural := 2;   -- vertical blank: 
   constant S : natural := 29;  -- rear guard: 
   constant T : natural := P + Q + R + S;  -- one vertical sync cycle: 
-  signal row, column : std_logic_vector(9 downto 0);
-  signal red, green, blue :  std_logic_vector(3 downto 0);
+
 begin
 
 																
@@ -69,49 +70,14 @@ begin
         V <= '1';
       end if;
 	end if;
-	 if column < 80  then
-	 	red <= "1101";
-		green <= "1101";
-		blue <= "1101";
-	 elsif column < 160  then
-	 	red <= "1101";
-		green <= "1101";
-		blue <= "0010";
-	 elsif column < 240  then
-	 	red <= "0010";
-		green <= "1101";
-		blue <= "1101";
-	 elsif column < 320  then
-	 	red <= "0010";
-		green <= "1101";
-		blue <= "0010";
-	 elsif column < 400  then
-	 	red <= "1101";
-		green <= "0010";
-		blue <= "1101";
-	 elsif column < 480  then
-	 	red <= "1101";
-		green <= "0010";
-		blue <= "0010";
-	 elsif column < 560  then
-	 	red <= "0010";
-		green <= "0010";
-		blue <= "1101";
-	 else 
-	 	red <= "0010";
-		green <= "0010";
-		blue <= "0010";
-    end if;
 
-    -- mapping of the variable to the signals
-     -- negative signs are because the conversion bits are reversed
    row <= vertical;
    column <= horizontal;
 	 
 
-	Rout <= red(depth_counter);
-	Gout <= green(depth_counter);
-	Bout <= blue(depth_counter);
+	Red_out <= red(depth_counter);
+	Grn_out <= green(depth_counter);
+	Blu_out <= blue(depth_counter);
 
   end process;
 
